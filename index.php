@@ -27,10 +27,10 @@ function sortAlphabetically(array $arr): array
     return $arr;
 }
 
-$dirFileNames = getDirFileNamesWithoutDots('/srv/www/');
-$sortedDirFileNames = sortAlphabetically($dirFileNames);
-$middleIndex = calculateMiddleIndex($dirFileNames);
-$uppercaseMiddleFileName = strtoupper($sortedDirFileNames[$middleIndex]);
+$fileNames = getDirFileNamesWithoutDots('/srv/www/');
+$sortedFileNames = sortAlphabetically($fileNames);
+$middleIndex = calculateMiddleIndex($fileNames);
+$uppercaseMiddleFileName = strtoupper($sortedFileNames[$middleIndex]);
 
 $endsWithS = strpos($uppercaseMiddleFileName, 'S') === strlen($uppercaseMiddleFileName) - 1;
 if ($endsWithS) {
