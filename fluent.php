@@ -39,6 +39,11 @@ class Collection
     {
         return reset($this->items);
     }
+
+    public function toArray()
+    {
+        return $this->items;
+    }
 }
 
 $result = (new Collection(scandir('/srv/www')))
