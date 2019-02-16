@@ -2,7 +2,7 @@
 
 function getDirFileNamesWithoutDots(string $path): array
 {
-    $dir_file_names = [];
+    $fileNames = [];
     $directoryIterator = new DirectoryIterator($path);
 
     foreach ($directoryIterator as $file) {
@@ -10,10 +10,10 @@ function getDirFileNamesWithoutDots(string $path): array
             continue;
         }
 
-        $dir_file_names[] = $file->getFilename();
+        $fileNames[] = $file->getFilename();
     }
 
-    return $dir_file_names;
+    return $fileNames;
 }
 
 function calculateMiddleIndex(array $arr): int
